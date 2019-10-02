@@ -1,5 +1,5 @@
 {
-  "name": "tailor",
+  "name": "@adrianfish/tailor",
   "version": "1.0.0",
   "description": "A transpiler that focuses on transforming bare module specifiers to ES6 compatible imports. Also supports appending cache busting queries to the end of imports.",
   "main": "src/index.js",
@@ -16,7 +16,7 @@
     "es modules",
     "transform base module specifiers"
   ],
-  "author": "Adrian Fish <adrian.r.fish@gmail.com",
+  "author": "Adrian Fish",
   "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/adrianfish/tailor/issues"

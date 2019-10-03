@@ -60,6 +60,7 @@ exports.applyEmpathy = (outputFolder, includes, excludes, query) => __awaiter(th
     console.error(error);
     return;
   }
+
   try {
     yield new Promise((resolve, reject) => {
 

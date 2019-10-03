@@ -38,6 +38,7 @@ exports.resolveBareSpecifiers = (filePath, isComponentRequest, packageName, comp
       if (whatwgUrl.parseURL(specifier) !== null) {
           return;
       }
+
       let resolvedSpecifier;
       try {
         resolvedSpecifier = resolve.sync(specifier, {
@@ -66,6 +67,7 @@ exports.resolveBareSpecifiers = (filePath, isComponentRequest, packageName, comp
         }
         return;
       }
+
       if (!resolvedSpecifier.endsWith('.js')) {
         console.warn(`Module specifier "${specifier}" resolved to non .js file "${resolvedSpecifier}"`);
       }

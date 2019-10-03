@@ -48,5 +48,6 @@ exports.assetStage = (config) => __awaiter(this, void 0, void 0, function* () {
   yield writeFile(manifestPath, JSON.stringify(manifest));
   console.log('Installing modules to asset stage...');
   yield exec('npm i', { cwd: folder });
-  return path_1.join(folder, 'node_modules');
+  //return path_1.join(folder, 'node_modules');
+  return folder;
 });

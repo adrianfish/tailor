@@ -14,7 +14,7 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const path = require("path");
-const empathy = require("./empathy.js");
+const tailor = require("./tailor.js");
 
 const command = require("./command.js").getCommand();
 
@@ -25,7 +25,7 @@ switch (command.name) {
     const isDependency = initCwd != null && initCwd !== process.cwd();
     const shouldRunInstall = !isDependency || evenAsDependency;
     if (shouldRunInstall) {
-      empathy.applyEmpathy(assetsDirectory, only, ignore, query).then(() => {
+      tailor.applyEmpathy(assetsDirectory, only, ignore, query).then(() => {
         const prettyOutPath = path.relative(process.cwd(), assetsDirectory);
         console.log(`Assets installed to "${prettyOutPath}" 🖖`);
       }).catch(error => {
@@ -38,7 +38,7 @@ switch (command.name) {
   }
   case 'publish': {
     const { sources, assetsDirectory, distDirectory } = command.options;
-    empathy.reverseEmpathy(sources, assetsDirectory, distDirectory).then(() => {
+    tailor.reverseEmpathy(sources, assetsDirectory, distDirectory).then(() => {
       const prettyOutPath = path.relative(process.cwd(), distDirectory);
       console.log(`Artifacts with name specifiers placed in "${prettyOutPath}" 🖖`);
     }).catch(error => {

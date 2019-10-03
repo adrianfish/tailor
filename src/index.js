@@ -13,6 +13,7 @@
  * http://polymer.github.io/PATENTS.txt
  */
 Object.defineProperty(exports, "__esModule", { value: true });
+
 const path = require("path");
 const tailor = require("./tailor.js");
 

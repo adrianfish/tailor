@@ -33,6 +33,11 @@ const mkdtemp = util_1.promisify(fs.mkdtemp);
 const writeFile = util_1.promisify(fs.writeFile);
 const exec = util_1.promisify(childProcess.exec);
 
+/**
+ * Creates a staging directory under the OS tmp directory, creates a package.json in there
+ * and then runs "npm i" to install all the node dependencies into that directory. The new
+ * node_modules directory path is then returned
+ */
 exports.assetStage = (config) => __awaiter(this, void 0, void 0, function* () {
 
   const folder = yield mkdtemp(path_1.join(os_1.tmpdir(), 'asset_stage'));
